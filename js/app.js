@@ -1,7 +1,12 @@
 // Enemies our player must avoid
+
+// TODO: Define Enemy
 var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
+
+    // X Position
+    // Y Position
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
@@ -14,6 +19,13 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+
+    // TODO: Automate enemy movement
+    // If enemy isn't past bounds of screen's edge
+        // Move forward
+        // Increment x by speed * dt
+    // else
+        // Reset to start position
 };
 
 // Draw the enemy on the screen, required method for game
@@ -25,10 +37,34 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
+// TODO: Hero Class
+// Hero Class
+    // Constructor
+        // Properties
+            // X position
+            // Y position
+            // Sprite
+        // Methods
+            // Update position
+                // Check for collision
+                        // Did Player collide with enemy?
+                // Check for win
+                    // Did player reach final tile?
+            // Render
+                // Draw player sprite on current X and Y coordinate
+            // Handle keyboard input
+                // Update player's X and Y coordinates according to keyboard input
+            // Reset Hero (win game or collision)
+                // Set X and Y coordinates to starting X and Y coordinates
+
 
 // Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
+
+// TODO: New Hero object
+
+// TODO: Place all enemy objects in an array called allEnemies
+
+// TODO: Place the player object in a variable called player
 
 
 
