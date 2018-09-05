@@ -49,6 +49,20 @@ class Hero {
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
+    // Update player's location according to keyboard input
+    handleInput(input) {
+        switch (input) {
+            case "left":
+                this.x -= 25;
+                break;
+            case "right":
+                this.x += 25;
+            case "up":
+                this.y -= 25;
+            case "down":
+                this.y += 25;
+        }
+    }
 }
 
 // Hero Class
