@@ -57,10 +57,13 @@ class Hero {
                 break;
             case "right":
                 this.x += 25;
+                break;
             case "up":
                 this.y -= 25;
+                break;
             case "down":
                 this.y += 25;
+                break;
         }
     }
 }
