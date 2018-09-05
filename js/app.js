@@ -38,6 +38,19 @@ Enemy.prototype.render = function() {
 // a handleInput() method.
 
 // TODO: Hero Class
+class Hero {
+    constructor() {
+        this.x = 0;
+        this.y = 0;
+        this.sprite = 'images/char-boy.png';
+    }
+
+    // Draw the hero sprite based on current X and Y coordinate position
+    render() {
+        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    }
+}
+
 // Hero Class
     // Constructor
         // Properties
@@ -60,7 +73,6 @@ Enemy.prototype.render = function() {
 
 // Now instantiate your objects.
 
-// TODO: New Hero object
 
 // TODO: Place all enemy objects in an array called allEnemies
 
