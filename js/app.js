@@ -72,7 +72,7 @@ class Hero {
 
 
 // Now instantiate your objects.
-
+const player = new Hero();
 
 // TODO: Place all enemy objects in an array called allEnemies
 
