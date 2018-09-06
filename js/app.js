@@ -20,8 +20,9 @@ Enemy.prototype.update = function(dt) {
     if (this.x < this.boundary) {
         this.x += 250 * dt;
     }
-    // else
-        // Reset to start position
+    else {
+        this.x = 0;
+    }
 };
 
 // Draw the enemy on the screen, required method for game
