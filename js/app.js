@@ -43,8 +43,8 @@ class Hero {
         this.x = 0;
         this.y = 0;
         this.sprite = 'images/char-boy.png';
-        this.xDistance = 101;
-        this.yDistance = 83;
+        this.distanceX = 101;
+        this.distanceY = 83;
     }
 
     // Draw the hero sprite based on current X and Y coordinate position
@@ -55,16 +55,16 @@ class Hero {
     handleInput(input) {
         switch (input) {
             case "left":
-                this.x -= this.xDistance;
+                this.x -= this.distanceX;
                 break;
             case "right":
-                this.x += this.xDistance;
+                this.x += this.distanceX;
                 break;
             case "up":
-                this.y -= this.yDistance;
+                this.y -= this.distanceY;
                 break;
             case "down":
-                this.y += this.yDistance;
+                this.y += this.distanceY;
                 break;
         }
     }
