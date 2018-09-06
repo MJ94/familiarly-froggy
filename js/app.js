@@ -7,6 +7,7 @@ var Enemy = function() {
     this.distanceX = 101;
     this.sprite = 'images/enemy-bug.png';
     this.boundary = this.distanceX * 5;
+    this.resetPosition = -this.distanceX;
 };
 
 // Update the enemy's position, required method for game
@@ -21,7 +22,7 @@ Enemy.prototype.update = function(dt) {
         this.x += 250 * dt;
     }
     else {
-        this.x = 0;
+        this.x = this.resetPosition;
     }
 };
 
