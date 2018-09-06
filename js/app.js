@@ -39,7 +39,7 @@ class Hero {
         this.distanceX = 101;
         this.distanceY = 83;
         this.startX = this.distanceX * 2;
-        this.startY = this.distanceY * 5;
+        this.startY = (this.distanceY * 4) + 55;
         this.x = this.startX;
         this.y = this.startY;
     }
@@ -52,12 +52,11 @@ class Hero {
 
     update () {
         for (let enemy of allEnemies) {
-            if (this.y === enemy.y) {
-                console.log("Same row!");
+            if (this.y === enemy.y && (enemy.x + enemy.distanceX/2 > this.x && enemy.x < this.x + this.distanceX/2)) {
             }
         }
     }
-    
+
     // Update player's location according to keyboard input
 
     handleInput(input) {
@@ -104,9 +103,9 @@ class Hero {
 // Instantiate objects
 const player = new Hero();
 
-const enemy1 = new Enemy(0, 15, 200);
-const enemy2 = new Enemy(0, 90, 250);
-const enemy3 = new Enemy(0, 175, 300);
+const enemy1 = new Enemy(0, 0, 200);
+const enemy2 = new Enemy(0, 83, 250);
+const enemy3 = new Enemy(0, 166, 300);
 
 const allEnemies = [];
 allEnemies.push(enemy1, enemy2, enemy3);
