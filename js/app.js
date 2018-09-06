@@ -2,14 +2,8 @@
 
 // TODO: Define Enemy
 var Enemy = function() {
-    // Variables applied to each of our instances go here,
-    // we've provided one for you to get started
-
-    // X Position
-    // Y Position
-
-    // The image/sprite for our enemies, this uses
-    // a helper we've provided to easily load images
+    this.x = 0;
+    this.y = 0;
     this.sprite = 'images/enemy-bug.png';
 };
 
@@ -103,6 +97,10 @@ class Hero {
 
 // Now instantiate your objects.
 const player = new Hero();
+
+const enemy1 = new Enemy();
+const allEnemies = [];
+allEnemies.push(enemy1);
 
 // TODO: Place all enemy objects in an array called allEnemies
 
