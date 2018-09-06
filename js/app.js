@@ -57,16 +57,25 @@ class Hero {
     handleInput(input) {
         switch (input) {
             case "left":
-                this.x -= this.distanceX;
+                if (this.x > 0) {
+                    this.x -= this.distanceX;
+                }
                 break;
             case "right":
-                this.x += this.distanceX;
+                if (this.x < this.distanceX * 4) {
+                    this.x += this.distanceX;
+                }
                 break;
             case "up":
-                this.y -= this.distanceY;
+                if (this.y > 0) {
+                    this.y -= this.distanceY;
+                }
+
                 break;
             case "down":
-                this.y += this.distanceY;
+                if (this.y < this.distanceY * 5) {
+                    this.y += this.distanceY;
+                }
                 break;
         }
     }
