@@ -1,9 +1,10 @@
 // Enemies our player must avoid
 
 // TODO: Define Enemy
-var Enemy = function(x, y) {
+var Enemy = function(x, y, speed) {
     this.x = x;
     this.y = y + 55;
+    this.speed = speed;
     this.distanceX = 101;
     this.sprite = 'images/enemy-bug.png';
     this.boundary = this.distanceX * 5;
@@ -19,7 +20,7 @@ Enemy.prototype.update = function(dt) {
 
     // TODO: Automate enemy movement
     if (this.x < this.boundary) {
-        this.x += 250 * dt;
+        this.x += this.speed * dt;
     }
     else {
         this.x = this.resetPosition;
@@ -102,9 +103,9 @@ class Hero {
 // Now instantiate your objects.
 const player = new Hero();
 
-const enemy1 = new Enemy(0, 15);
-const enemy2 = new Enemy(0, 90);
-const enemy3 = new Enemy(0, 175);
+const enemy1 = new Enemy(0, 15, 200);
+const enemy2 = new Enemy(0, 90, 250);
+const enemy3 = new Enemy(0, 175, 300);
 
 const allEnemies = [];
 allEnemies.push(enemy1, enemy2, enemy3);
