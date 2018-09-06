@@ -49,6 +49,15 @@ class Hero {
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
+
+    update () {
+        for (let enemy of allEnemies) {
+            if (this.y === enemy.y) {
+                console.log("Same row!");
+            }
+        }
+    }
+    
     // Update player's location according to keyboard input
 
     handleInput(input) {
