@@ -50,9 +50,16 @@ class Hero {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 
+    // Reset the hero to starting position
+    reset() {
+        this.x = this.startX;
+        this.y = this.startY;
+    }
+
     update () {
         for (let enemy of allEnemies) {
             if (this.y === enemy.y && (enemy.x + enemy.distanceX/2 > this.x && enemy.x < this.x + this.distanceX/2)) {
+            this.reset();
             }
         }
     }
