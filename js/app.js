@@ -4,7 +4,9 @@
 var Enemy = function() {
     this.x = 0;
     this.y = 0;
+    this.distanceX = 101;
     this.sprite = 'images/enemy-bug.png';
+    this.boundary = this.distanceX * 5;
 };
 
 // Update the enemy's position, required method for game
@@ -15,9 +17,9 @@ Enemy.prototype.update = function(dt) {
     // all computers.
 
     // TODO: Automate enemy movement
-    // If enemy isn't past bounds of screen's edge
-        // Move forward
-        // Increment x by speed * dt
+    if (this.x < this.boundary) {
+        this.x += 250 * dt;
+    }
     // else
         // Reset to start position
 };
