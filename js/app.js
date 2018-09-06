@@ -40,11 +40,13 @@ Enemy.prototype.render = function() {
 // TODO: Hero Class
 class Hero {
     constructor() {
-        this.x = 0;
-        this.y = 0;
         this.sprite = 'images/char-boy.png';
         this.distanceX = 101;
         this.distanceY = 83;
+        this.startX = this.distanceX * 2;
+        this.startY = this.distanceY * 5;
+        this.x = this.startX;
+        this.y = this.startY;
     }
 
     // Draw the hero sprite based on current X and Y coordinate position
