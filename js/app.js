@@ -1,9 +1,9 @@
 // Enemies our player must avoid
 
 // TODO: Define Enemy
-var Enemy = function() {
-    this.x = 0;
-    this.y = 55;
+var Enemy = function(x, y) {
+    this.x = x;
+    this.y = y + 55;
     this.distanceX = 101;
     this.sprite = 'images/enemy-bug.png';
     this.boundary = this.distanceX * 5;
@@ -102,9 +102,12 @@ class Hero {
 // Now instantiate your objects.
 const player = new Hero();
 
-const enemy1 = new Enemy();
+const enemy1 = new Enemy(0, 15);
+const enemy2 = new Enemy(0, 90);
+const enemy3 = new Enemy(0, 175);
+
 const allEnemies = [];
-allEnemies.push(enemy1);
+allEnemies.push(enemy1, enemy2, enemy3);
 
 // TODO: Place all enemy objects in an array called allEnemies
 
