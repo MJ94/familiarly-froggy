@@ -1,6 +1,5 @@
 // Enemies our player must avoid
 
-// TODO: Define Enemy
 var Enemy = function(x, y, speed) {
     this.x = x;
     this.y = y + 55;
@@ -11,14 +10,15 @@ var Enemy = function(x, y, speed) {
     this.resetPosition = -this.distanceX;
 };
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
+/* Update the enemy's position, required method for game
+ Parameter: dt, a time delta between ticks */
+
 Enemy.prototype.update = function(dt) {
-    // You should multiply any movement by the dt parameter
+
+    // Multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
 
-    // TODO: Automate enemy movement
     if (this.x < this.boundary) {
         this.x += this.speed * dt;
     }
@@ -28,15 +28,11 @@ Enemy.prototype.update = function(dt) {
 };
 
 // Draw the enemy on the screen, required method for game
+
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
-
-// TODO: Hero Class
 class Hero {
     constructor() {
         this.sprite = 'images/char-boy.png';
@@ -49,10 +45,12 @@ class Hero {
     }
 
     // Draw the hero sprite based on current X and Y coordinate position
+
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
     // Update player's location according to keyboard input
+
     handleInput(input) {
         switch (input) {
             case "left":
@@ -80,12 +78,6 @@ class Hero {
     }
 }
 
-// Hero Class
-    // Constructor
-        // Properties
-            // X position
-            // Y position
-            // Sprite
         // Methods
             // Update position
                 // Check for collision
@@ -100,7 +92,7 @@ class Hero {
                 // Set X and Y coordinates to starting X and Y coordinates
 
 
-// Now instantiate your objects.
+// Instantiate objects
 const player = new Hero();
 
 const enemy1 = new Enemy(0, 15, 200);
@@ -110,14 +102,10 @@ const enemy3 = new Enemy(0, 175, 300);
 const allEnemies = [];
 allEnemies.push(enemy1, enemy2, enemy3);
 
-// TODO: Place all enemy objects in an array called allEnemies
 
-// TODO: Place the player object in a variable called player
+/* This listens for key presses and sends the keys to your
+Player.handleInput() method. */
 
-
-
-// This listens for key presses and sends the keys to your
-// Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
