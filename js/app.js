@@ -93,20 +93,6 @@ class Hero {
     }
 }
 
-        // Methods
-            // Update position
-                // Check for collision
-                        // Did Player collide with enemy?
-                // Check for win
-                    // Did player reach final tile?
-            // Render
-                // Draw player sprite on current X and Y coordinate
-            // Handle keyboard input
-                // Update player's X and Y coordinates according to keyboard input
-            // Reset Hero (win game or collision)
-                // Set X and Y coordinates to starting X and Y coordinates
-
-
 // Instantiate objects
 const player = new Hero();
 
