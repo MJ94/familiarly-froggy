@@ -3,7 +3,7 @@
 // TODO: Define Enemy
 var Enemy = function() {
     this.x = 0;
-    this.y = 0;
+    this.y = 55;
     this.distanceX = 101;
     this.sprite = 'images/enemy-bug.png';
     this.boundary = this.distanceX * 5;
