@@ -57,8 +57,22 @@ var Engine = (function(global) {
          * function again as soon as the browser is able to draw another frame.
          */
 
+        function modal() {
+            swal({
+                title: "Good job!",
+                text: "You helped him cross!",
+                icon: "success",
+                button: "Replay?",
+            }).then(function () {
+                player.reset();
+                player.winner = false;
+                win.requestAnimationFrame(main);
+            });
+        }
+
         if (player.winner === true) {
-            win.cancelAnimationFrame(requestFrame)
+            win.cancelAnimationFrame(requestFrame);
+            modal();
         } else {
             requestFrame = win.requestAnimationFrame(main);
         }
