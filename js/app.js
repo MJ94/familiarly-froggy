@@ -16,9 +16,9 @@ class Enemy {
 
     update(dt) {
 
-        // Multiply any movement by the dt parameter
-        // which will ensure the game runs at the same speed for
-        // all computers.
+      /*  Multiply any movement by the dt parameter
+        which will ensure the game runs at the same speed for
+        all computers. */
 
         if (this.x < this.boundary) {
             this.x += this.speed * dt;
@@ -54,6 +54,7 @@ class Hero {
     }
 
     // Reset the hero to starting position
+
     reset() {
         this.x = this.startX;
         this.y = this.startY;
@@ -101,6 +102,7 @@ class Hero {
 }
 
 // Instantiate objects
+
 const player = new Hero();
 
 const enemy1 = new Enemy(0, 0, 200);
@@ -111,7 +113,7 @@ const allEnemies = [];
 allEnemies.push(enemy1, enemy2, enemy3);
 
 
-/* This listens for key presses and sends the keys to your
+/* This listens for key presses and sends the keys to the
 Player.handleInput() method. */
 
 document.addEventListener('keyup', e => {
