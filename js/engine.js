@@ -206,4 +206,4 @@ const Engine = ((global => {
      * from within their app.js files.
      */
     global.ctx = ctx;
-}))(this);
+}))(window);
