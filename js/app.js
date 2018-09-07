@@ -42,7 +42,7 @@ class Hero {
         this.startY = (this.distanceY * 4) + 55;
         this.x = this.startX;
         this.y = this.startY;
-        this.win = false;
+        this.winner = false;
     }
 
     // Draw the hero sprite based on current X and Y coordinate position
@@ -65,7 +65,7 @@ class Hero {
         }
 
         if (this.y === 55) {
-            this.win = true;
+            this.winner = true;
         }
     }
 
